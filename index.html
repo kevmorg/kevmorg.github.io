@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Morgan | Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Layout reset for sticky footer */
+        html, body {
+            height: 100%;
             margin: 0;
+            display: flex;
+            flex-direction: column;
             background-color: #f9f9f9;
             color: #333;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
         }
+
         header {
             background: #2c3e50;
             color: white;
@@ -26,13 +31,28 @@
             font-size: 1.2rem;
             opacity: 0.9;
         }
+
+        main {
+            flex: 1; /* Pushes footer to bottom */
+            max-width: 1200px;
+            margin: auto;
+            width: 100%;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: auto;
         }
         .card {
             background: white;
@@ -64,12 +84,12 @@
         .card a:hover {
             background: #217dbb;
         }
+
         footer {
             background: #2c3e50;
             color: white;
             text-align: center;
             padding: 1rem;
-            margin-top: 2rem;
         }
         footer a {
             color: #3498db;
@@ -84,35 +104,43 @@
     <p>Software Engineer | Game Developer | Web Developer</p>
 </header>
 
-<section class="projects">
-    <div class="card">
-        <h3>Calendar Modules</h3>
-        <p>An app for defining reusable modules (e.g., event templates) and automatically populating related tasks into a Google Calendar and Google Tasks integration.</p>
-        <a href="https://calendarmodules.onrender.com" target="_blank">View Project</a>
-    </div>
+<main>
+    <section>
+        <h2>Personal Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Calendar Modules</h3>
+                <p>An app for defining reusable modules (e.g., event templates) and automatically populating related tasks into a Google Calendar and Google Tasks integration.</p>
+                <a href="https://calendarmodules.onrender.com" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-        <h3>Metroid (Unity Remaster)</h3>
-        <p>A re-creation of the classic NES game Metroid, featuring custom levels and a new "mimic mode" mechanic.</p>
-        <a href="https://int-inertia.itch.io/metroid-nes-remake?secret=gAwh7uKYxPh5ita8y9QxiPE5LY" target="_blank">Play Now</a>
-    </div>
-
-    <div class="card">
-        <h3>ChronoShift</h3>
-        <p>A 2D puzzle-platformer where you record and play back avatars to solve levels with time-based mechanics.</p>
-        <a href="https://int-inertia.itch.io/chronoshift" target="_blank">Play Now</a>
-    </div>
-
-    <div class="card">
-        <h3>Tracey and the Magic Brush</h3>
-        <p>A 2D puzzle-platformer where players draw platforms with magical paint colors to progress through levels.</p>
-        <a href="https://daethtech.itch.io/tracey-and-the-magic-brush-494-p3-version" target="_blank">Play Now</a>
-    </div>
-</section>
+    <section>
+        <h2>College Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Metroid (Unity Remaster)</h3>
+                <p>A re-creation of the classic NES game Metroid, featuring custom levels and a new "mimic mode" mechanic.</p>
+                <a href="https://int-inertia.itch.io/metroid-nes-remake?secret=gAwh7uKYxPh5ita8y9QxiPE5LY" target="_blank">Play Now</a>
+            </div>
+            <div class="card">
+                <h3>ChronoShift</h3>
+                <p>A 2D puzzle-platformer where you record and play back avatars to solve levels with time-based mechanics.</p>
+                <a href="https://int-inertia.itch.io/chronoshift" target="_blank">Play Now</a>
+            </div>
+            <div class="card">
+                <h3>Tracey and the Magic Brush</h3>
+                <p>A 2D puzzle-platformer where players draw platforms with magical paint colors to progress through levels.</p>
+                <a href="https://daethtech.itch.io/tracey-and-the-magic-brush-494-p3-version" target="_blank">Play Now</a>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
     <p>Contact: <a href="mailto:your.email@example.com">your.email@example.com</a> | 
-       <a href="https://github.com/kevmorg" target="_blank">GitHub</a> | 
+       <a href="https://github.com/yourgithub" target="_blank">GitHub</a> | 
        <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
     </p>
 </footer>
